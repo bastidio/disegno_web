@@ -1,6 +1,4 @@
-/* =======================
-   PALETA Y ESTILOS GENERALES
-   ======================= */
+
 :root {
   --color-blanco: #ffffff;
   --color-fondo: #f4f6f8;
@@ -10,7 +8,7 @@
   --font-principal: 'Inter', sans-serif;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; min-width: 0; } /* evita overflows en flex/grid */
+* { margin: 0; padding: 0; box-sizing: border-box; min-width: 0; } 
 html { scroll-behavior: smooth; }
 body {
   font-family: var(--font-principal);
@@ -35,7 +33,7 @@ img { max-inline-size: 100%; }
 .sidebar-column,
 .main-column { max-width: 100%; }
 
-/* Contención local en contenedores clave para evitar que un hijo cree scroll de página */
+
 .container,
 .layout-wrapper,
 .carousel-container,
@@ -44,9 +42,7 @@ img { max-inline-size: 100%; }
 
 
 
-/* =======================
-   TÍTULO Y CONTENIDO
-   ======================= */
+
 .hero-section { padding: 60px 0; text-align: center; background-color: var(--color-blanco); }
 .hero-section h1 { font-size: 2.8em; font-weight: 900; }
 
@@ -72,8 +68,7 @@ img { max-inline-size: 100%; }
 .list-item:last-child { border-bottom: none; }
 .list-item p { font-size: 1.2em; font-weight: 700; }
 
-/* Tablas generales */
-/* === Estilos originales de la tabla de posiciones === */
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -96,7 +91,7 @@ th {
   font-weight: 700;
 }
 
-/* Celdas de club con logo + nombre */
+
 .team-cell {
   display: flex;
   align-items: center;
@@ -124,9 +119,7 @@ tbody .pj-col {
   font-weight: 700;
 }
 
-/* =======================
-   TARJETAS DE PARTIDO
-   ======================= */
+
 .matches-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 20px; }
 .match-card {
   background-color: var(--color-blanco);
@@ -157,9 +150,7 @@ tbody .pj-col {
 }
 .match-card-cta:hover { background-color: var(--color-azul-principal); color: var(--color-blanco); }
 
-/* =======================
-   TABLA DE GOLEADORES
-   ======================= */
+
 .scorers-table { background-color: var(--color-blanco); border-radius: 8px; overflow: hidden; border: 1px solid var(--color-gris-bordes); }
 .scorer-row { display: grid; grid-template-columns: 50px 2fr 1.5fr 1fr; align-items: center; padding: 12px 15px; border-bottom: 1px solid var(--color-gris-bordes); }
 .scorer-row:last-child { border-bottom: none; }
@@ -169,9 +160,7 @@ tbody .pj-col {
 .scorer-player img, .scorer-team img { width: 30px; height: 30px; object-fit: contain; border-radius: 50%; }
 .scorer-goals { text-align: center; font-weight: 900; font-size: 1.2em; color: var(--color-azul-principal); }
 
-/* =======================
-   CARRUSEL DE CLUBES
-   ======================= */
+
 .carousel-container { position: relative; width: 100%; padding-inline: 44px; }
 .carousel-window { width: 100%; overflow: hidden; contain: content; }
 .carousel-track { display: flex; transition: transform 0.5s ease-in-out; will-change: transform; }
@@ -190,17 +179,13 @@ tbody .pj-col {
 .carousel-button.prev { left: 4px; }
 .carousel-button.next { right: 4px; }
 
-/* =======================
-   PUBLICIDAD
-   ======================= */
+
 #ad, #publicidad, .ad-placeholder { margin: 40px auto; text-align: center; }
 .ad-label { font-size: 0.7em; color: #b0b0b0; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
 body.dark-mode .ad-label { color: #666; }
 .ad-placeholder img { max-width: 100%; height: auto; border: 1px solid var(--color-gris-bordes); }
 
-/* =======================
-   MODALES
-   ======================= */
+
 .modal-overlay {
   position: fixed; inset: 0; background-color: rgba(0,0,0,0.7);
   display: none; justify-content: center; align-items: center; z-index: 200;
@@ -227,9 +212,7 @@ body.dark-mode .ad-label { color: #666; }
 .stat-bar { grid-column: 1 / -1; background-color: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden; }
 .stat-bar-inner { background-color: var(--color-azul-principal); height: 100%; width: 50%; border-radius: 4px; transition: width 0.5s ease-in-out; }
 
-/* =======================
-   DARK MODE
-   ======================= */
+
 body.dark-mode {
   --color-blanco: #1e1e1e;
   --color-fondo: #121212;
@@ -251,9 +234,7 @@ body.dark-mode .scorer-row:not(.header):hover { background-color: #2c2c2e; }
 body.dark-mode .match-modal-header .match-league { color: #999; }
 body.dark-mode .stat-bar { background-color: #3a3a3c; }
 
-/* =======================
-   FOOTER
-   ======================= */
+
 .main-footer {
   padding: 40px 0; text-align: center;
   border-top: 1px solid var(--color-gris-bordes);
@@ -264,9 +245,7 @@ body.dark-mode .stat-bar { background-color: #3a3a3c; }
 .footer-social-icons a:hover { color: var(--color-azul-principal); transform: translateY(-3px); }
 body.dark-mode .footer-social-icons a { color: #999; }
 
-/* =======================
-   RESPONSIVE
-   ======================= */
+
 @media (max-width: 1100px) {
   .container { max-width: 90%; }
 }
@@ -282,7 +261,7 @@ body.dark-mode .footer-social-icons a { color: #999; }
   .featured-article h3 { font-size: 1.2rem; }
   .featured-article p { font-size: 0.9rem; }
 
-  /* menú ocupa ancho sin desbordar */
+
   .main-nav ul { position: static; background: none; border-top: none; padding: 0; }
 
   .carousel-container { padding-inline: 24px; }
@@ -294,9 +273,7 @@ body.dark-mode .footer-social-icons a { color: #999; }
   .featured-article { max-width: 95%; padding: 0.7rem; }
   .carousel-container { padding-inline: 18px; }
 }
-/* ======================= */
-/* BOTÓN MODO OSCURO ORIGINAL */
-/* ======================= */
+
 .dark-mode-button {
   background-color: #e0e0e0;
   border: none;
@@ -340,7 +317,7 @@ body.dark-mode .footer-social-icons a { color: #999; }
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* === Estado Dark Mode === */
+
 body.dark-mode .dark-mode-button {
   background-color: #333;
 }
@@ -358,7 +335,7 @@ body.dark-mode .dark-mode-button .sun {
   opacity: 1;
   transform: scale(1);
 }
-/* === Ocultar logo en pantallas móviles === */
+
 @media (max-width: 768px) {
   .logo img {
     display: none;
@@ -366,7 +343,7 @@ body.dark-mode .dark-mode-button .sun {
   }
 }
 
-/* === Ocultar escudos en la tabla de posiciones en pantallas móviles === */
+
 @media (max-width: 768px) {
   .team-cell img {
     display: none;
@@ -378,36 +355,37 @@ body.dark-mode .dark-mode-button .sun {
   justify-content: center;
 }
 
-/* ======== Bootstrap navbar adaptado a tu estilo ======== */
 
-/* Fondo del header */
+
+
 .main-header .navbar {
   background-color: var(--color-blanco) !important;
   border-bottom: 1px solid var(--color-gris-bordes);
 }
 
 
-/* Letras del menú en blanco cuando está el modo oscuro */
+
 body.dark-mode .nav-link {
   color: #ffffff !important;
 }
 
-/* Hover también blanco (o azul claro si querés) */
+
 body.dark-mode .nav-link:hover,
 body.dark-mode .nav-link:focus {
-  color: #58abf8 !important; /* tu azul de dark mode */
+  color: #58abf8 !important; 
 }
 
-/* Si querés que el texto del logo también se vuelva blanco */
+
 body.dark-mode .brand-text {
   color: #ffffff !important;
 }
-/* --- HAMBURGUESA EN MODO OSCURO --- */
+
 body.dark-mode .navbar-toggler i {
-  color: #ffffff !important;   /* icono blanco */
+  color: #ffffff !important;   
 }
 
-/* Si Bootstrap muestra su lineita default */
+
 body.dark-mode .navbar-toggler-icon {
-  filter: invert(1) !important;  /* vuelve blanco el icono SVG */
+  filter: invert(1) !important;  
 }
+
